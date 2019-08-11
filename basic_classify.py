@@ -70,3 +70,12 @@ y_train = train_labels[10000:]
 fitted_Model = model.fit(x_train,y_train, epochs=40, batch_size=512, validation_data=(x_val,y_val), verbose=1)
 results = model.evaluate(test_data,test_labels)
 print(results)
+
+model.save("model.h5")
+
+# test_review = test_data[0]
+# predict = model.predict([test_review])
+# print("Review : ")
+# print(decode_review(test_review))
+# print("Prediction : "+str(predict[0]))
+# print("Actual : "+str(test_labels[0]))
